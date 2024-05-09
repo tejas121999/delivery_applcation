@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket.io Notifications</title>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+    <h1>Socket.io Notifications</h1>
+    <div id="notificationContainer"></div>
+
+    <script>
+        const socket = io('http://localhost:8080');
+        console.log("hello")
+        socket.on('receiveNotification', (notification) => {
+            console.log(notification)
+            window.alert(notification);
+        });
+    </script>
+</body>
+
+</html>
