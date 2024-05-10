@@ -62,4 +62,4 @@ app.post("/sendNotification", (req, res) => {
   res.status(200).send("Notification sent successfully");
 });
 
-module.exports = { app, io };
+module.exports = { app, io, server };
